@@ -1,0 +1,160 @@
+/* Navbar.css */
+
+.navbar-container {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 80px;
+  margin-right: 8px;
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Menu Items */
+.menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu li a:hover,
+.menu li a.active {
+  color: #0077ff;
+}
+
+/* Right Icons */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.icon {
+  width: 24px;
+  cursor: pointer;
+}
+
+.cart-icon-container {
+  position: relative;
+}
+
+.cart-dot {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  height: 10px;
+  width: 10px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+/* Profile dropdown */
+.profile-container {
+  position: relative;
+}
+
+.profile-icon {
+  width: 30px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.dropdown-menu button,
+.dropdown-menu a {
+  background: none;
+  border: none;
+  padding: 8px;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-menu button:hover,
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Hamburger (Mobile) */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    display: none;
+    border-top: 1px solid #ccc;
+  }
+
+  .menu.mobile-open {
+    display: flex;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+}
